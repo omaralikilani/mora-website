@@ -3,237 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MORA - Personal Website</title>
+  <title>DECL</title>
   <style>
-   * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Rubik', sans-serif;
-    }
-html{
-    scroll-behavior: smooth;
+    /* Reset أساسي */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-    body {
-      background: linear-gradient(to right, #f3f4f6, #e0f7fa);
-      color: #333;
-    }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 20px 50px;
-      background: #0f172a;
-      color: #fff;
-    }
+/* تنسيق البودي */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    .logo {
-      font-size: 30px;
-      font-weight: 600;
-      letter-spacing: 2px;
-    }
+/* العناوين */
+h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  border-left: 5px solid #3498db;
+  padding-left: 10px;
+  margin-top: 30px;
+}
 
-    nav a {
-      margin-left: 20px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
+/* الفقرات */
+p {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
 
-    nav a:hover {
-      color: #60a5fa;
-    }
+/* تأثير عند المرور */
+p:hover {
+  background: #f0f8ff;
+  transition: 0.3s;
+}
 
-    section {
-      padding: 60px 50px;
-    }
-
-    .section1 {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      background: #ffffff;
-      border-radius: 15px;
-      padding: 40px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    .section1 img {
-      width: 300px;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
-    .intro {
-      max-width: 600px;
-      font-size: 20px;
-      line-height: 1.6;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
-      color: #1f2937;
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      background-color: #d1d5db;
-      margin-bottom: 15px;
-    }
-
-    .card p {
-      font-size: 16px;
-      color: #4b5563;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .section1 {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .section1 img {
-        margin-top: 20px;
-      }
-
-      .intro {
-        font-size: 18px;
-      }
-    }
   </style>
 </head>
 <body>
+  <h1>Topics I enjoyed in Udacity</h1>
+  <p>I really enjoyed this initiative and one of the things I enjoyed the most was the HTML markup language because it is easy and explained in detail. It is a language that gives you the authority to create a website and write anything in it, and this was fun for me, so I started to learn a lot. Also, one of the topics that were explained to me easily was the binary number system, the hexadecimal system, and the ASCII system, and this was easy for me because I started to learn more and more about them, and I learned a lot and a lot about these systems.</p>
+  <h1>Topics I thought were difficult</h1>
+  <p>I want to know more and more about creating and designing websites. For example, I heard that if I want to design websites, I must learn the CSS language because it shapes the website, decorates it, and makes it look better if you learn it. In addition to that, you can also learn the JavaScript language and make this subject easier for you. I want to become a website programmer.</p>
+  <h1>Topics I thought were difficult</h1>
+  <p>I think that the Blockly program is very difficult and this is something that is difficult for me, but thanks to Udacity I learned a lot and a lot in this program. Now I work with all the blocks and I did many things with them, such as a calculator and also the Thinkpool program. I worked in many programs, but in the beginning I thought that this was difficult and tiring, but with training I started to improve step by step with Udacity.</p>
 
-  <header>
-    <div class="logo">MORA</div>
-    <nav>
-      <a href="#me">Me</a>
-      <a href="#family">Family</a>
-      <a href="#friends">Friends</a>
-      <a href="#football">Football</a>
-    </nav>
-  </header>
-
-  <section class="section1" id="me">
-    <div class="intro">
-      <h2>Hi, I'm Omar!</h2>
-      <p>I'm 14 years old and a school student. Welcome to my personal website where I share a little about myself, my interests, and the people I care about.</p>
-    </div>
-    
-  </section>
-
-  <section id="family">
-    <h2 style="font-size: 28px; margin-bottom: 30px;">My Family</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Ali Kilany</h3>
-        
-        <p><strong>My Dad</strong><br>My dad is the strongest person I know. He teaches me how to be responsible and always supports me in everything I do. He works hard to make our life better and keeps the family safe and happy.</p>
-      <a href="https://www.facebook.com/aboomr201">facebook</a>
-    </div>
-      <div class="card">
-        <h3>Sayed Kilany</h3>
-      
-        <p><strong>My Brother</strong><br>Sayed is a kind and helpful brother. He always plays with me, helps me with homework, and shares his things with me. He is fun to be around and makes me laugh when I’m sad. I’m lucky to have him as my brother.</p>
-     <a href="https://www.facebook.com/my.alon.73">facebook</a> 
-    </div>
-      <div class="card">
-        <h3>Mostafa Kilany</h3>
-        
-        <p><strong>My Brother</strong><br>Mostafa is my cool brother. He is smart and always gives me good advice. I learn a lot from him, and we enjoy spending time together. He supports me and stands by me like a best friend.</p>
-        <a href="https://www.facebook.com/mostafa.ali.661451">facebook</a>
-    </div>
-      <div class="card">
-        <h3>My Mum</h3>
-        <p><strong>My Mum</strong><br>My mum is the most loving and caring person in my life. She always takes care of me, helps me with everything, and makes sure I am happy. Her kindness, support, and sacrifices are endless. I love her so much and I am very thankful for everything she does for me every single day.</p>
-      </div>
-    </div>
-  </section>
-<section id="friends">
-    <h2 style="font-size: 28px; margin-bottom: 30px;">My Friends</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Ziad Gomaa</h3>
-        
-        <p><strong>A Loyal Friend</strong><br> Ziad is one of the most reliable and loyal friends I have. He's always there for me whenever I need support, and I can count on him in any situation. What makes Ziad special is his courage and sense of honor — he's the kind of person who stands up for what's right and never turns his back on his friends. He's not just trustworthy, he's also genuinely kind and always ready to help without expecting anything in return. Having a friend like Ziad is truly a blessing.</p>
-    </div>
-    <div class="card">
-     <h3>Shihab Gomaa</h3>
-     <p><strong>make smile me</strong><br>Shehab is a true friend and someone I really respect. He's a genuine and dependable guy — always standing by his friends and showing what it really means to be there for others. Shehab has a strong personality, and you can always count on him to act with integrity and courage. One of the things he loves most is football; he’s always talking about it, playing it, or watching matches. His passion for the game and his solid character make him a great person to be around.</p>
-<a href="https://www.instagram.com/zezomohamed1102/">instgram</a>
-
-    </div>
-      <div class="card">
-        <h3>Youssef joo</h3>
-        
-       
-        <p><strong>The Mood Changer</strong><br>Youssef is one of my closest friends, and I truly admire him for his strong character. He's always been there for me through thick and thin, showing incredible loyalty and kindness. What makes Youssef stand out is his bravery and generosity — he's the kind of person who would never hesitate to help others, even if it means going out of his way. He's not just a good friend; he's more like a brother. I’m lucky to have someone like him in my life, and I hope our friendship continues to grow stronger with time.</p>
-      <a href="https://www.instagram.com/1x_youssef_x7/">instagram</a> 
-    </div>
-      <div class="card">
-        <h3>Ziad Lotfy</h3>
-        
-        <p><strong>The Fun Buddy</strong><br>Ziad is a great friend and someone I really look up to. He's very passionate about sports and always stays active and disciplined, whether he's playing football, working out, or just encouraging others to stay fit. What I really admire about Ziad is that he's always supportive and dependable — a true stand-up guy. He's the type of friend you can count on no matter what. His positive energy and commitment to his goals inspire everyone around him.</p>
-        <p></p>
-    <a href="https://www.instagram.com/z_eiadmohamed1111/">instgram</a>  
-    </div>
-    </div>
-  </section>
-   <section id="football">
-    <h2 style="font-size: 28px; margin-bottom: 30px;">Football</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Real Madrid</h3>
-       
-        <p>Real Madrid is one of the greatest football clubs in the world. With a history full of victories, they have won many La Liga titles and Champions League trophies. The club is known for its legendary players, strong teamwork, and beautiful style of play. I admire their passion and winning spirit.</p>
-      </div>
-      <div class="card">
-        <h3>Al Ahly</h3>
-        
-        <p>Al Ahly is the pride of Egyptian football. With countless national and continental titles, they are the most successful club in Africa. Their fans are passionate, and the team always shows great determination. Watching Al Ahly play makes me proud of my country.</p>
-      </div>
-      <div class="card">
-        <h3>Cristiano Ronaldo</h3>
-        
-        <p>Cristiano Ronaldo is my favorite football player. He is fast, strong, and a true goal-scoring machine. His hard work, confidence, and dedication to improving himself are so inspiring. He never gives up and always aims to be the best. Watching him play motivates me to do my best in everything.</p>
-      </div>
-    </div>
-</section>
 </body>
 </html>
