@@ -1,61 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DECL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Happy Message for Mayson (محمي)</title>
   <style>
-    /* Reset أساسي */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
+    :root{--bg:#FFF8FB;--card:#fff;--accent:#ff6fb5;--accent2:#6b8cff;--text:#222}
+    *{box-sizing:border-box}
+    body{margin:0;font-family: 'Segoe UI', Tahoma, system-ui, sans-serif;background: linear-gradient(180deg,var(--bg),#ae0606);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+       
+    /* card */
+    .card{width:100%;max-width:920px;background:var(--card);border-radius:20px;box-shadow:0 10px 30px rgba(16,24,40,0.08);padding:28px;position:relative;overflow:hidden;border:1px solid rgba(255,111,181,0.08)}
 
-/* تنسيق البودي */
-body {
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
-}
+    /* password overlay */
+    .overlay{position:fixed;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.55));display:flex;align-items:center;justify-content:center;z-index:9999}
+    .pwbox{background:rgb(254, 251, 251);padding:28px;border-radius:14px;max-width:420px;width:92%;text-align:center;box-shadow:0 20px 40px rgba(2,6,23,0.4)}
+    .pwbox h2{margin:0 0 10px;font-size:20px}
+    .pwinput{width:100%;padding:12px;border-radius:10px;border:1px solid #eee;font-size:18px;margin-top:8px}
+    .pwbtn{margin-top:12px;padding:10px 14px;border-radius:10px;border:0;background:var(--accent);color:rgb(136, 24, 24);font-weight:700;cursor:pointer}
+    .err{color:#c33;margin-top:8px;min-height:18px}
 
-/* العناوين */
-h1 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-  border-left: 5px solid #3498db;
-  padding-left: 10px;
-  margin-top: 30px;
-}
+    /* hidden initially until correct pw */
+    .hidden{display:none}
 
-/* الفقرات */
-p {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-}
+    /* rest same as before - message area styles */
+    .header{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+    .avatar{width:68px;height:68px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:28px;color:white;font-weight:700;box-shadow:0 6px 18px rgba(107,140,255,0.14)}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:0;color:#555}
+    .message-area{margin-top:18px;width:100%;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(250,245,255,0.95));border:1px solid rgba(107,140,255,0.06);min-height:220px;display:flex;flex-direction:column;gap:6px;align-items:stretch;font-size:20px;line-height:1.45}
+    .line{padding:6px 10px;border-radius:8px;display:block;white-space:pre-wrap;word-break:break-word;background:transparent;transition:transform .18s ease, box-shadow .18s ease}
+    .line:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(16,24,40,0.06)}
+    .franco{margin-top:8px;padding:10px;border-radius:10px;background:linear-gradient(90deg, rgba(255,111,181,0.06), rgba(107,140,255,0.04));font-size:18px;color:#111;font-weight:600}
+    .controls{display:flex;gap:10px;margin-top:14px}
+    button{cursor:pointer;padding:10px 14px;border-radius:10px;border:0;background:var(--accent);color:white;font-weight:700}
+    button.alt{background:var(--accent2)}
+    button.ghost{background:transparent;border:1px solid rgba(16,24,40,0.06);color:var(--text);font-weight:600}
+    .small{font-size:13px;color:#666;margin-top:8px}
+    canvas.confetti{position:absolute;inset:0;pointer-events:none}
 
-/* تأثير عند المرور */
-p:hover {
-  background: #f0f8ff;
-  transition: 0.3s;
-}
-
+    @media (max-width:520px){.message-area{font-size:18px}.avatar{width:56px;height:56px;font-size:22px}}
   </style>
 </head>
 <body>
-  <h1>Topics I enjoyed in Udacity</h1>
-  <p>I really enjoyed this initiative and one of the things I enjoyed the most was the HTML markup language because it is easy and explained in detail. It is a language that gives you the authority to create a website and write anything in it, and this was fun for me, so I started to learn a lot. Also, one of the topics that were explained to me easily was the binary number system, the hexadecimal system, and the ASCII system, and this was easy for me because I started to learn more and more about them, and I learned a lot and a lot about these systems.</p>
-  <h1>Topics I thought were difficult</h1>
-  <p>I want to know more and more about creating and designing websites. For example, I heard that if I want to design websites, I must learn the CSS language because it shapes the website, decorates it, and makes it look better if you learn it. In addition to that, you can also learn the JavaScript language and make this subject easier for you. I want to become a website programmer.</p>
-  <h1>Topics I thought were difficult</h1>
-  <p>I think that the Blockly program is very difficult and this is something that is difficult for me, but thanks to Udacity I learned a lot and a lot in this program. Now I work with all the blocks and I did many things with them, such as a calculator and also the Thinkpool program. I worked in many programs, but in the beginning I thought that this was difficult and tiring, but with training I started to improve step by step with Udacity.</p>
 
+  <!-- password overlay (user must enter b7bk) -->
+  <div class="overlay" id="overlay">
+    <div class="pwbox" role="dialog" aria-labelledby="pwTitle" aria-modal="true">
+      <h2 id="pwTitle">Password : b7bk</h2>
+      <p>اكتب كلمة السر علشان تشوف الرسالة 💌</p>
+      <input id="pwInput" class="pwinput" placeholder="اكتب الباسورد هنا" aria-label="password input" />
+      <div style="display:flex;gap:8px;justify-content:center">
+        <button id="pwBtn" class="pwbtn">فتح</button>
+        <button id="showHint" class="pwbtn" style="background:#6b8cff">خليلي hint</button>
+      </div>
+      <div class="err" id="pwErr"></div>
+    </div>
+  </div>
+
+  <!-- main card (hidden until correct password) -->
+  <div class="card hidden" id="card">
+    <div class="header">
+      <div class="avatar">💖</div>
+      <div>
+        <h1>لـ  ميسونتي  💕</h1>
+        <p class="lead">I Love You♥🌚</p>
+      </div>
+    </div>
+
+    <div class="message-area" id="messageArea" aria-live="polite"></div>
+    <div class="franco" id="francoBlock"></div>
+
+    <div class="controls">
+      <button class="ghost" id="copyBtn">انسخ الرسالة 📋</button>
+    </div>
+    <div class="small">اضغط "قلب السطور" علشان الكلام يتخلط و يطلع شكل جديد. ممكن تغير النص جوه الكود لو عايز.</div>
+    <canvas class="confetti" id="confettiCanvas"></canvas>
+  </div>
+
+  <script>
+    // === password logic ===
+    const CORRECT = 'b7bk';
+    const overlay = document.getElementById('overlay');
+    const pwInput = document.getElementById('pwInput');
+    const pwBtn = document.getElementById('pwBtn');
+    const pwErr = document.getElementById('pwErr');
+    const showHint = document.getElementById('showHint');
+    const card = document.getElementById('card');
+
+    function openCard(){
+      overlay.classList.add('hidden');
+      card.classList.remove('hidden');
+    }
+
+    function shake(el){
+      el.style.transition = 'transform .06s ease';
+      el.style.transform = 'translateX(-8px)';
+      setTimeout(()=> el.style.transform = 'translateX(8px)', 60);
+      setTimeout(()=> el.style.transform = '', 120);
+    }
+
+    pwBtn.addEventListener('click', ()=>{
+      const val = pwInput.value.trim();
+      if(val === CORRECT){
+        openCard();
+        initApp();
+      }else{
+        pwErr.textContent = 'كلمة السر مش صحيحة 😕';
+        shake(pwInput);
+      }
+    });
+
+    pwInput.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') pwBtn.click(); });
+    showHint.addEventListener('click', ()=>{ pwErr.textContent = 'Hint: الفكرة في حروف و رقمين... ب7bk'; });
+
+    // === main app content (same as before) ===
+    const lines = [
+      'ميسونتي، يا أول فرحة تقابل قلبي كل صباح 🌞💗',
+      'انتي اللي بتخلي الدنيا أحلى، حتى لما تكون الدنيا هادية وصامتة 🌙✨',
+      'ضحكتك بتفتح باب العمر كله وبتخليني أنسى كل هموومي 😄🎈',
+      'إنتي القمر اللي بينور لياليّ، والنجوم بتحسد نورك 🌕⭐️',
+      'من غيرك المكان فاضي، ومن غير ضحكتك ما فيه معنى للكلام 💌',
+      'كل كلمة حب مني ليكي مش كفاية، بس بحاول أكتبها بحروف وردية 🌷📝',
+      'لو ممكن أوقف الزمن علشان أفضى معاكي، كنت عملت ده بنفس ثانية ⏳💞',
+      'حبي ليكي مش كلام، ده نبض بيدق باسمك كل ثانية 💓🔐',
+      'بيني وبينك وعد: هافضل جمبك مهما الدنيا عملت، وانتِ ليا كل الدنيا 🌍🤝',
+      'يا مشمشي يا روحي يا أغلى من كل غاليين، بحبك فوق الوصف 😍🔥',
+      'وجودك جنبي عامل زي موسيقى حلوة مالهاش أول ولا آخر 🎶❤️',
+      'عيونك بحر بحس إني تايه فيه بحب الضياع ده 🌊👀',
+      'كل مرة أشوفك الدنيا تضحكلي وأبقى عايش في حلم صادق ✨💫',
+      'انتِ سبب صمتي ساعات: بس صمت مليان حب وامتنان 🤫🌺',
+      'ياريت الكلمة تعبر، بس الكلام يقف عاجز قدام جمالك وروحك 🥺💐'
+    ];
+
+    const franco = [
+      '7abibi Mayson, enty 3omry w el donia btebda feek 😊🌹',
+      'ana mesh 2ader astana, law a2olak kol haga bas el a7la enty 💘',
+      'enta elly bedawar 3ala el far7a, w ana la2eet-ha ma3aki 💫',
+      'mashy ma3aki fee kteer 7agat bas elly yhemny enti 🙏❤️',
+      '7obena 3ala tool, w el ayam teb2a helwa lama nkon sawa 👫✨',
+      'enta w ana, da3wa men rabena tetmamlena kol el far7a 🔒💍',
+      'ma3aki keda el 7ayah leh ma3na, w el kol yeb2a leeh zohor 🌸😍'
+    ];
+
+    const messageArea = document.getElementById('messageArea');
+    const francoBlock = document.getElementById('francoBlock');
+
+    function renderLines(arr){
+      messageArea.innerHTML = '';
+      arr.forEach((txt) =>{
+        const el = document.createElement('div');
+        el.className = 'line';
+        el.innerText = txt;
+        messageArea.appendChild(el);
+      });
+    }
+
+    function renderFranco(arr){
+      francoBlock.innerHTML = arr.map(s => '• ' + s).join('\n');
+    }
+
+    function initApp(){
+      renderLines(lines);
+      renderFranco(franco);
+      setupActions();
+      resizeCanvas();
+    }
+
+    // shuffle utility
+    function shuffle(a){
+      const b = a.slice();
+      for(let i = b.length-1; i>0; i--){
+        const j = Math.floor(Math.random()*(i+1));
+        [b[i], b[j]] = [b[j], b[i]];
+      }
+      return b;
+    }
+
+    function setupActions(){
+      document.getElementById('shuffle').addEventListener('click', ()=>{ const mixed = shuffle(lines.concat()); renderLines(mixed); triggerConfetti(); });
+      document.getElementById('surprise').addEventListener('click', ()=>{ const surprise = 'مفاجأة! كل يوم معاك أحلى من اللي قبله 🌟💝'; const surpriseFr = 'yalla nshoof 3ala tool, enty el far7a bta3ty 😉💞'; const newLines = [surprise].concat(shuffle(lines)); const newFranco = [surpriseFr].concat(franco); renderLines(newLines); renderFranco(newFranco); triggerConfetti(); });
+      document.getElementById('copyBtn').addEventListener('click', async ()=>{ const text = Array.from(document.querySelectorAll('#messageArea .line')).map(x=>x.innerText).join('\n') + '\n\n' + francoBlock.innerText; try{ await navigator.clipboard.writeText(text); alert('انسخت الرسالة! دلوقتي تبعتلها 😊'); }catch(e){ prompt('انسخ النص من هنا:', text); } });
+    }
+
+    // confetti canvas
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    let confettiPieces = [];
+
+    function resizeCanvas(){ if(!card) return; canvas.width = card.clientWidth; canvas.height = card.clientHeight; canvas.style.width = '100%'; canvas.style.height = '100%'; }
+    window.addEventListener('resize', resizeCanvas);
+
+    function createConfetti(){ confettiPieces = []; const count = 40; for(let i=0;i<count;i++){ confettiPieces.push({ x: Math.random()*canvas.width, y: Math.random()*-canvas.height, r: 6+Math.random()*8, d: Math.random()*count, tilt: Math.random()*10 - 10, color: ['#ff6fb5','#6b8cff','#ffd36b','#9be7b7'][Math.floor(Math.random()*4)], speed: 1 + Math.random()*3 }); } }
+    function drawConfetti(){ ctx.clearRect(0,0,canvas.width,canvas.height); confettiPieces.forEach(p=>{ ctx.beginPath(); ctx.fillStyle = p.color; ctx.fillRect(p.x, p.y, p.r, p.r*0.6); ctx.closePath(); }); }
+    function updateConfetti(){ confettiPieces.forEach(p=>{ p.y += p.speed + Math.sin(p.d); p.x += Math.sin(p.d); p.tilt += 0.1; if(p.y > canvas.height) p.y = -10; }); }
+    let confettiInterval = null;
+    function triggerConfetti(){ createConfetti(); if(confettiInterval) clearInterval(confettiInterval); confettiInterval = setInterval(()=>{ drawConfetti(); updateConfetti(); }, 30); setTimeout(()=>{ clearInterval(confettiInterval); ctx.clearRect(0,0,canvas.width,canvas.height); }, 4000); }
+
+  </script>
 </body>
 </html>
