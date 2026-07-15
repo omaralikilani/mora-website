@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stayle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>al ahly fc</title>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+
+    let currentSlide = 0;
+    let autoSlide;
+
+    // عرض صورة معينة
+    function showSlide(index) {
+
+        slides.forEach(slide => {
+            slide.classList.remove("active");
+        });
+
+        dots.forEach(dot => {
+            dot.classList.remove("active");
+        });
+
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+
+        currentSlide = index;
+    }
+
+    // الصورة التالية
+    function nextSlide() {
+
+        currentSlide++;
+
+        if(currentSlide >= slides.length){
+            currentSlide = 0;
+        }
+
+        showSlide(currentSlide);
+    }
+
+    // تشغيل السلايدر
+    function startSlider(){
+
+        autoSlide = setInterval(nextSlide,4000);
+
+    }
+
+    // إيقاف السلايدر
+    function stopSlider(){
+
+        clearInterval(autoSlide);
+
+    }
+
+    // تشغيل أول صورة
+    showSlide(0);
+
+    // بدء التشغيل
+    startSlider();
+
+    // الضغط على الدوت
+    dots.forEach((dot,index)=>{
+
+        dot.addEventListener("click",function(){
+
+            stopSlider();
+
+            showSlide(index);
+
+            startSlider();
+
+        });
+
+    });
+
+    // إيقاف عند مرور الماوس
+    const slider = document.querySelector(".hero-slider");
+
+    slider.addEventListener("mouseenter",stopSlider);
+
+    slider.addEventListener("mouseleave",startSlider);
+
+});
+</script>
+</head>
+<body>
+    <header>
+        
+    <!-- قسم الشعار (Logo) -->
+    <div class="logo">
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToKfeG8CW94wohEbOQrFwdkjgisLmKR8GOt8Z8BlEj-A&s=10" alt=""></a>
+    </div>
+
+    <!-- قائمة التنقل الرئيسية (Navigation Menu) -->
+    <nav>
+        <ul>
+            <li><a href="#mora">الرئيسية</a></li>
+            <li><a href="#sayed">أخبار النادي</a></li>
+            <li><a href="#mostafa">الفريق الأول</a></li>
+            <li><a href="#ali">دولاب البطولات</a></li> <!-- دي أهم صفحة للأهلي! -->
+            <li><a href="#omar">المباريات</a></li>
+            <li><a href="#isco">الألعاب الأخرى</a></li>
+        </ul>
+    </nav>
+
+    <!-- زر تفاعلي اختياري (Call to Action) -->
+    <div class="header-btn">
+        <a href="https://alahlyfoundation.com/ar/donate">اتبرع الان</a>
+    </div>
+
+    </header>
+<!-- السيكشن الرئيسي الحديث (Hero Slider) -->
+<section class="hero-slider" id="mora" >
+    <div class="slider-wrapper">
+        
+        <!-- الشريحة الأولى -->
+        <div class="slide active">
+            <!-- الصورة الخلفية (صورة جمهور الأهلي العظيم في الاستاد) -->
+            <img src="https://media.gettyimages.com/id/2220170913/photo/al-ahly-fc-v-inter-miami-cf-group-a-fifa-club-world-cup-2025.jpg?s=2048x2048&w=gi&k=20&c=CquJ2cbdQGDQ1bLuV5nr9CnCMMsXX9pl5tvNhSO9L00=" alt="جمهور النادي الأهلي">
+            <!-- الطبقة المظلمة فوق الصورة -->
+            <div class="overlay"></div>
+            <!-- المحتوى النصي -->
+            <div class="slide-content">
+                <h2>النادي الأهلي المصري</h2>
+                <p>نادي القرن الأفريقي والأكثر تتويجاً بالبطولات في القارة السمراء، ملوك الصالات وصانعي المجد.</p>
+            </div>
+        </div>
+
+        <!-- الشريحة الثانية -->
+        <div class="slide">
+            <!-- صورة احتفالية تاريخية بالكأس -->
+            <img src="https://media.gettyimages.com/id/2221786561/photo/fc-porto-v-al-ahly-sc-group-a-fifa-club-world-cup-2025.jpg?s=2048x2048&w=gi&k=20&c=_eauMKP2Ie80LEMWgExPEv-NzYVi7jOsM8kQk_wZxGs=" alt="بطولات الأهلي">
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h2>جماهير تصنع التاريخ</h2>
+
+<p>
+وراء كل إنجاز يقف ملايين العاشقين للقلعة الحمراء،
+يهتفون للأهلي في كل مكان ويمنحون الفريق القوة حتى صافرة النهاية.
+</p>
+            </div>
+        </div>
+
+        <!-- الشريحة الثالثة -->
+        <div class="slide">
+            <!-- صورة تعبيرية عن التدريبات أو كرة القدم للنادي -->
+            <img src="https://img.youm7.com/ArticleImgs/2020/11/7/421969-%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8-%D8%A7%D9%84%D8%A7%D9%87%D9%84%D9%89--(2).jpg" alt="تدريبات الأهلي">
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h2>العمل اليوم... مجد الغد</h2>
+
+<p>
+داخل أرضية التدريب يبدأ طريق البطولات،
+حيث يلتقي الطموح بالإصرار ليصنع فريقًا قادرًا على المنافسة في كل تحدٍ.
+</p>
+            </div>
+        </div>
+
+        <!-- الشريحة الرابعة -->
+        <div class="slide">
+            <!-- صورة تعبيرية للملعب أو المتجر -->
+            <img src="https://www.albawabhnews.com/Upload/libfiles/724/4/370.jpg" alt="استاد الأهلي">
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h2>من القلعة الحمراء... يبدأ المجد</h2>
+
+<p>
+كل لقب يحمل قصة،
+وكل انتصار يصنع ذكرى،
+وكل جيل يرتدي هذا الشعار
+يعرف أن المجد ليس هدفًا... بل مسؤولية.
+</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- النقاط التفاعلية بالأسفل (الـ Dots) تماماً مثل الصورة -->
+    <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+<!-- سيكشن الأخبار - لوحة تحكم النسر -->
+<section class="ahly-dashboard-section" id="sayed">
+    <!-- استدعاء خط Cairo و Reem Kufi من جوجل وتفعيل أيقونات FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Reem_Kufi:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    د
+
+    <div class="dashboard-container">
+        
+        <!-- 1. العمود الأيمن الجمالي: القلعة الحمراء -->
+        <div class="vertical-title">
+            القلعة الحمراء
+        </div>
+
+        <!-- 2. الجزء الرئيسي للأخبار ولوحة التحكم -->
+        <div class="main-content">
+            
+            <!-- الهيدر العلوي الذكي للقسم -->
+            <div class="dashboard-header">
+                <!-- العداد الرقمي المضيء لأحدث الأخبار -->
+                <div class="news-counter">
+                    <span class="counter-label">آخر<br>الأخبار</span>
+                    <div class="counter-digits">
+                        <span class="digit">2</span>
+                        <span class="digit">1</span>
+                    </div>
+                </div>
+
+                <!-- شريط البث المباشر والأخبار العاجلة -->
+                <div class="ticker-wrapper">
+                    <div class="ticker-label">بث مباشر</div>
+                    <div class="ticker-text-flow">
+                        <span>🔴 مؤتمر صحفي بعد قليل لكولر للحديث عن الاستعدادات • التدريبات مستمرة بانتظام بملعب مختار التتش • التذاكر متاحة الآن عبر موقع تذكرتي لجميع الجماهير...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- شبكة الكروت التفاعلية -->
+            <div class="news-grid">
+                
+                <!-- الخبر الرئيسي العملاق (Hero Card) -->
+                <a href="#" class="news-card hero-card" style="background-image: url('https://img.btolat.com/2023/6/18/news/319006/large.jpg');">
+                    <span class="card-category">الأهلي</span>
+                    <div class="card-content">
+                        <h3 class="card-title">الأهلي يواصل استعداداته بقوة استعدادًا للمواجهة المقبلة</h3>
+                        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px;">خاض الفريق الأول لكرة القدم بالنادي الأهلي مرانه الرئيسي وسط تركيز كبير من اللاعبين والجهاز الفني، استعدادًا للمباراة المقبلة في البطولة المحلية.</p>
+                        <span class="read-more-btn">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></span>
+                        <div class="card-footer-info">
+                            <span><i class="fa-regular fa-clock"></i> منذ ساعتين</span>
+                            <span>2026/07/15 21:00</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- كارت متوسط جانبي -->
+                <a href="#" class="news-card gold-card" style="background-image: url('https://english.ahram.org.eg/Media/News/2022/2/5/2022-637796969650964294-96.jpg');">
+                    <span class="card-category">الأهلي</span>
+                    <div class="card-content">
+                        <h3 class="card-title">الأهلي يحسم المواجهة بأداء هجومي مميز</h3>
+                        <div class="card-footer-info">
+                            <span><i class="fa-regular fa-clock"></i> منذ 4 ساعات</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- الصف السفلي المقسم لثلاث كروت -->
+                <div class="bottom-row-wrapper">
+                    
+                    <!-- كارت صغير 1 -->
+                    <a href="#" class="news-card" style="background-image: url('https://media.gettyimages.com/id/1478871254/photo/al-ahly-fans-in-the-stands-before-the-match-at-cairo-international-stadium-on-april-1-2023-in.jpg?s=612x612&w=gi&k=20&c=2qX6wr-aaIy0iSL5cupP5tADHm3nTiIzWGnriItu-ks=');">
+                        <span class="card-category">الأهلي</span>
+                        <div class="card-content">
+                            <h4 class="card-title" style="font-size: 14px;">جماهير الأهلي تواصل دعم الفريق قبل المواجهة المرتقبة</h4>
+                            <div class="card-footer-info">
+                                <span><i class="fa-regular fa-clock"></i> منذ 6 ساعات</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- كارت صغير 2 -->
+                    <a href="#" class="news-card" style="background-image: url('https://fr.hespress.com/wp-content/uploads/2024/02/ammouta_jordanie.jpg');">
+                        <span class="card-category">الأهلي</span>
+                        <div class="card-content">
+                            <h4 class="card-title" style="font-size: 14px;">الحسين عموتة يبدأ مهمته مع الأهلي استعدادًا للموسم الجديد</h4>
+                            <div class="card-footer-info">
+                                <span><i class="fa-regular fa-clock"></i> منذ 8 ساعات</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- كارت تاريخي / أساطير -->
+                    <a href="#" class="news-card" style="background-image: url('https://media.gettyimages.com/id/1244298341/photo/players-of-al-ahly-celebrate-victory-with-the-trophy-on-the-podium-at-the-end-of-the-egyptian.jpg?s=612x612&w=gi&k=20&c=fQYhgrsx7CmDlEaeAoxyyXlDs-f-pUnkXoBmYZ5T47U='); border: 1px solid rgba(197, 160, 89, 0.3);">
+                        <span class="card-category" style="background: rgba(197, 160, 89, 0.2); border-color: var(--gold); color: var(--gold);">أساطير</span>
+                        <div class="card-content">
+                            <h4 class="card-title" style="font-size: 14px; color: #fbfbfb;">الأهلي يقترب من رقم تاريخي جديد في الدوري المصري</h4>
+                            <div class="card-footer-info">
+                                <span><i class="fa-regular fa-calendar"></i> أمس</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+            
+</section>
+<!-- سيكشن الفريق الأول - منصة عمالقة الأحمر التفاعلية كاملة -->
+<section class="ahly-team-section" id="mostafa">
+    <!-- استدعاء خطوط Google والخطوط الرياضية الفخمة وأيقونات FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Reem_Kufi:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --neon-red: #ff1e2b;
+            --primary-red: #e30613;
+            --gold: #c5a059;
+            --dark-bg: #0b0b0c;
+            --card-glass: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --text-muted: #a0a0a5;
+        }
+
+        .ahly-team-section {
+            direction: rtl;
+            background-color: var(--dark-bg);
+            color: #fff;
+            padding: 80px 20px;
+            font-family: 'Cairo', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* توهج خلفي ناري مستقبلي */
+        .ahly-team-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(227, 6, 19, 0.18) 0%, rgba(0,0,0,0) 70%);
+            transform: translateY(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .team-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ترويسة القسم */
+        .team-section-header {
+            margin-bottom: 50px;
+            text-align: right;
+            border-right: 5px solid var(--primary-red);
+            padding-right: 15px;
+        }
+
+        .team-section-header h2 {
+            font-family: 'Reem Kufi', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .team-section-header h2 span {
+            color: var(--gold);
+        }
+
+        .team-section-header p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* شبكة العرض وتقسيم الواجهة */
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 992px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 1. قائمة تحديد اللاعبين الـ 11 مع شريط تمرير داخلي */
+        .players-scroll-container {
+            max-height: 580px;
+            overflow-y: auto;
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* تخصيص الـ Scrollbar ليبقى أنيقاً ومستقبلياً */
+        .players-scroll-container::-webkit-scrollbar {
+            width: 5px;
+        }
+        .players-scroll-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.01);
+        }
+        .players-scroll-container::-webkit-scrollbar-thumb {
+            background: var(--primary-red);
+            border-radius: 10px;
+        }
+
+        .selector-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--card-glass);
+            border: 1px solid var(--border-glass);
+            padding: 12px 20px;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .selector-card:hover, .selector-card.active {
+            background: rgba(227, 6, 19, 0.08);
+            border-color: var(--primary-red);
+            box-shadow: 0 0 15px rgba(227, 6, 19, 0.15);
+            transform: translateX(-5px);
+        }
+
+        .player-info-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .player-avatar-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid var(--border-glass);
+            background: #151518;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+
+        .player-avatar-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .player-avatar-box i {
+            font-size: 18px;
+            color: var(--gold);
+        }
+
+        .selector-card:hover .player-avatar-box, .selector-card.active .player-avatar-box {
+            border-color: var(--primary-red);
+        }
+
+        .player-name-role h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .player-name-role span {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .selector-card:hover .player-name-role span, .selector-card.active .player-name-role span {
+            color: var(--gold);
+        }
+
+        .player-selector-num {
+            font-size: 20px;
+            font-weight: 900;
+            font-family: monospace;
+            color: rgba(255, 255, 255, 0.15);
+            transition: color 0.3s;
+        }
+
+        .selector-card:hover .player-selector-num, .selector-card.active .player-selector-num {
+            color: var(--neon-red);
+            text-shadow: 0 0 8px var(--neon-red);
+        }
+
+        /* 2. كارت النجم الكبير (Hero Showcase) */
+        .hero-player-showcase {
+            background: linear-gradient(135deg, rgba(18, 18, 20, 0.95) 0%, rgba(10, 10, 11, 0.98) 100%);
+            border: 2px solid var(--gold);
+            border-radius: 24px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 0 30px rgba(197, 160, 89, 0.15);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            backdrop-filter: blur(15px);
+            min-height: 540px;
+            justify-content: space-between;
+        }
+
+        /* الرقم المائي الخلفي */
+        .big-back-number {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-size: 160px;
+            font-weight: 900;
+            font-family: monospace;
+            color: rgba(255, 255, 255, 0.015);
+            line-height: 1;
+            user-select: none;
+            z-index: 0;
+            transition: all 0.5s ease;
+        }
+
+        .showcase-visual-area {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+        }
+
+        .hero-player-img {
+            max-height: 240px;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6));
+            transition: transform 0.4s ease, opacity 0.3s ease;
+        }
+
+        .hero-player-details {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-player-details h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 5px;
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-player-details .position-badge {
+            display: inline-block;
+            background: var(--primary-red);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(227, 6, 19, 0.3);
+            transition: opacity 0.3s ease;
+        }
+
+        /* لوحة الإحصائيات الفخمة */
+        .stats-glass-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            padding: 15px;
+            border-radius: 16px;
+            backdrop-filter: blur(5px);
+        }
+
+        .stat-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-num {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--gold);
+            font-family: monospace;
+            text-shadow: 0 0 8px rgba(197, 160, 89, 0.3);
+            transition: opacity 0.3s ease;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 3px;
+        }
+
+        /* تأثيرات تنقل ناعمة للبيانات المحدثة */
+        .fade-animation {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <div class="team-container">
+        <!-- ترويسة القسم -->
+        <div class="team-section-header">
+            <h2>كتيبة <span>الـ 11 محارب</span></h2>
+            <p>التشكيلة الأساسية للنادي الأهلي - انقر على أي لاعب لتفقد إحصائياته الذهبية وهيبته الميدانية</p>
+        </div>
+
+        <div class="team-grid">
+            <!-- 1. قائمة التمرير واختيار الـ 11 لاعب بالكامل -->
+            <div class="players-scroll-container" id="playersSelectorList">
+                <!-- سيتم توليد الـ 11 لاعب تلقائياً هنا -->
+            </div>
+
+            <!-- 2. كارت النجم الرئيسي التفاعلي النشط -->
+            <div class="hero-player-showcase" id="heroShowcase">
+                <div class="big-back-number" id="backNumber">1</div>
+                
+                <div class="showcase-visual-area">
+                    <!-- الصورة الكبيرة للاعب المختار -->
+                    <img class="hero-player-img" id="playerImage" src="" alt="صورة اللاعب">
+                </div>
+
+                <div class="hero-player-details">
+                    <h3 id="playerName">محمد الشناوي</h3>
+                    <span class="position-badge" id="playerPosition">حارس مرمى - القائد</span>
+
+                    <!-- الإحصائيات التفاعلية المتغيرة -->
+                    <div class="stats-glass-grid">
+                        <div class="stat-box">
+                            <span class="stat-num" id="stat1Value">254</span>
+                            <span class="stat-label" id="stat1Label">مباريات</span>
+                        </div>
+                        <div class="stat-box" style="border-right: 1px solid var(--border-glass); border-left: 1px solid var(--border-glass);">
+                            <span class="stat-num" id="stat2Value">142</span>
+                            <span class="stat-label" id="stat2Label">كلين شيت</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num" id="stat3Value">22</span>
+                            <span class="stat-label" id="stat3Label">بطولات</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- كود الجافا سكريبت التفاعلي لربط وتحديث بيانات الـ 11 لاعب بالصور -->
+    <script>
+        // لوجو النادي الأهلي الرسمي كـ بديل افتراضي (Fallback) في حال عدم توفر مسار لصور اللاعبين
+        const defaultFallbackImage = "https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Al_Ahly_SC_logo.svg/1200px-Al_Ahly_SC_logo.svg.png";
+
+        // مصفوفة البيانات الرسمية للـ 11 لاعب - ضع مسارات صورك داخل الخانات المخصصة ""
+        const ahlySquad = [
+            {
+                id: 1,
+                name: "محمد الشناوي",
+                number: "1",
+                role: "حارس مرمى - القائد",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfFAqv6jDcPKC79UoSeQCGFCNF-Cd8VGndFyqkUofTAg&s=10", // ضع مسار صورة الأفتار الدائرية الصغيرة هنا (مثال: "images/shinawy-avatar.png")
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrkVqS1g0v8H372xlgad8LtoBRYHC_sDq_uVjoV3XEqktWEXPZV8NJqss&s=10",  // ضع مسار الصورة الكبيرة المفرغة هنا (مثال: "images/shinawy-large.png")
+                stat1Val: "254", stat1Lab: "مباريات",
+                stat2Val: "142", stat2Lab: "كلين شيت",
+                stat3Val: "22", stat3Lab: "بطولات"
+            },
+            {
+                id: 2,
+                name: "ياسر إبراهيم",
+                number: "6",
+                role: "قلب دفاع",
+                avatar: "https://kolelkoora.com/wp-content/uploads/2025/04/%D9%8A%D8%A7%D8%B3%D8%B1-%D8%A5%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85.png", // ضع مسار صورة الأفتار هنا
+                image: "https://alahly-images.s3.us-east-2.amazonaws.com/Article/original/IMG_2334-656e14caf0888.jpeg",  // ضع مسار الصورة الكبيرة هنا
+                stat1Val: "180", stat1Lab: "مباريات",
+                stat2Val: "310", stat2Lab: "استخلاص كرة",
+                stat3Val: "12", stat3Lab: "بطولات"
+            },
+            {
+                id: 3,
+                name: "أشرف داري",
+                number: "15",
+                role: "مدافع صلب",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7fx0fu9xvLrnCi5f0FhDT19RCxX5hF3_UiHGRSecxVw&s=10", 
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy1DMrqXAwOFH-xkQaqhF1C3s9anpUNAnEYrYN9quiMA&s=10",  
+                stat1Val: "45", stat1Lab: "مباريات",
+                stat2Val: "85", stat2Lab: "قطع هجمات",
+                stat3Val: "3", stat3Lab: "بطولات"
+            },
+            {
+                id: 4,
+                name: "محمد هاني",
+                number: "30",
+                role: "ظهير أيمن طائر",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTly8oaTlG3HJmkPZzRwV6Pi77raPk64e9hMZToYzIcqg&s=10", 
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNJ60c-8L6nvjwNKUJYgRtHo5jFh5S3POHCDxHfSZbe7_IIkloFX25Qjo&s=10",  
+                stat1Val: "290", stat1Lab: "مباريات",
+                stat2Val: "24", stat2Lab: "صناعة أهداف",
+                stat3Val: "18", stat3Lab: "بطولات"
+            },
+            {
+                id: 5,
+                name: "يوسف بلعماري",
+                number: "20",
+                role: "ظهير أيسر عصري",
+                avatar: "https://kafapress.ma/photo/260126024408.png", 
+                image: "https://sportcdn.elwatannews.com/sport/861x439/1856750841770662226.jpg",  
+                stat1Val: "35", stat1Lab: "مباريات",
+                stat2Val: "8", stat2Lab: "صناعة أهداف",
+                stat3Val: "2", stat3Lab: "بطولات"
+            },
+            {
+                id: 6,
+                name: "مروان عطية",
+                number: "13",
+                role: "مسمار خط الوسط",
+                avatar: "https://mediayk.gemini.media/img/yallakora/players/players/MARAWAN-ATTIA-4617882025_6_19_7_38.webp", 
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnv9jb_9LB5_OsR0UbZpHdB5ARm5y2Cvwa3tSQFt8Bug&s=10",  
+                stat1Val: "110", stat1Lab: "مباريات",
+                stat2Val: "91%", stat2Lab: "دقة التمرير",
+                stat3Val: "7", stat3Lab: "بطولات"
+            },
+            {
+                id: 7,
+                name: "إمام عاشور",
+                number: "22",
+                role: "صانع ألعاب ومحرك الفريق",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT84kZkjTNl2TxHC_EbexANYtek7psJa3RuwYPbOi_1ng&s=10", 
+                image: "https://assets.kooora.com/images/v3/kooora_1308072_1/emam%20ashour.jpg?quality=60&auto=webp&format=pjpg",  
+                stat1Val: "85", stat1Lab: "أهداف",
+                stat2Val: "18", stat2Lab: "أهداف مسجلة",
+                stat3Val: "22", stat3Lab: "صناعة فرص"
+            },
+            {
+                id: 8,
+                name: "محمد علي بن رمضان",
+                number: "5",
+                role: "لاعب وسط هجومي",
+                avatar: "https://semedia.filgoal.com/Photos/Person/Medium/132626.png", 
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgvYKzCGTJqkY331kaJWunmajozFQGWV4RJ_ZjuQaOhskDqlVhpBLwzO0&s=10",  
+                stat1Val: "40", stat1Lab: "مباريات",
+                stat2Val: "6", stat2Lab: "أهداف",
+                stat3Val: "8", stat3Lab: "صناعة فرص"
+            },
+            {
+                id: 9,
+                name: "حسين الشحات",
+                number: "14",
+                role: "جناح نفاثة أيمن",
+                avatar: "https://semedia.filgoal.com/Photos/Person/Medium/24103.png", 
+                image: "https://media.besraha.com/2024/6/large/17341132503048202406281120212021.jpg",  
+                stat1Val: "210", stat1Lab: "مباريات",
+                stat2Val: "52", stat2Lab: "أهداف",
+                stat3Val: "48", stat3Lab: "صناعة أهداف"
+            },
+            {
+                id: 10,
+                name: "محمود حسن تريزيجيه",
+                number: "7",
+                role: "جناح يساري مدمر",
+                avatar: "https://misrconnect.com/storage/profiles/November2025/fQih3lXfy0L4CBbLPv4w.jpg", 
+                image: "https://koraplus.com/images/2026/7/large/16101326404134202607140723522352.webp",  
+                stat1Val: "125", stat1Lab: "مباريات",
+                stat2Val: "32", stat2Lab: "أهداف",
+                stat3Val: "38", stat3Lab: "صناعة أهداف"
+            },
+            {
+                id: 11,
+                name: "أشرف بن شرقي",
+                number: "17",
+                role: "مهاجم وهداف صريح",
+                avatar: "https://semedia.filgoal.com/Photos/Person/Medium/114594.png", 
+                image: "https://img.youm7.com/ArticleImgs/2025/1/30/49565-%D8%A7%D8%B4%D8%B1%D9%81-%D8%A8%D9%86-%D8%B4%D8%B1%D9%82%D9%8A-%D8%A8%D9%82%D9%85%D9%8A%D8%B5-%D8%A7%D9%84%D8%A3%D9%87%D9%84%D9%8A.jfif",  
+                stat1Val: "50", stat1Lab: "مباريات",
+                stat2Val: "21", stat2Lab: "أهداف مسجلة",
+                stat3Val: "12", stat3Lab: "صناعة أهداف"
+            }
+        ];
+
+        // بناء وعرض قائمة اللاعبين بالكامل داخل الـ Scroll Container
+        const container = document.getElementById('playersSelectorList');
+        
+        ahlySquad.forEach((player, index) => {
+            const card = document.createElement('div');
+            card.className = `selector-card ${index === 0 ? 'active' : ''}`;
+            card.onclick = () => selectPlayer(player, card);
+            
+            // تحقق إذا كان الأفتار متوفر أو يوضع أيقونة نينجا كـ Placeholder فخم
+            const avatarHTML = player.avatar !== "" 
+                ? `<img src="${player.avatar}" alt="${player.name}">` 
+                : `<i class="fa-solid fa-user-shield"></i>`;
+            
+            card.innerHTML = `
+                <div class="player-info-meta">
+                    <div class="player-avatar-box">
+                        ${avatarHTML}
+                    </div>
+                    <div class="player-name-role">
+                        <h4>${player.name}</h4>
+                        <span>${player.role}</span>
+                    </div>
+                </div>
+                <span class="player-selector-num">${player.number}</span>
+            `;
+            container.appendChild(card);
+        });
+
+        // تهيئة العرض المبدئي لأول لاعب في القائمة (محمد الشناوي) عند تحميل الصفحة
+        window.addEventListener('DOMContentLoaded', () => {
+            const firstPlayer = ahlySquad[0];
+            updateShowcaseDOM(firstPlayer);
+        });
+
+        // وظيفة تحديث بيانات اللاعب في الكارت الرئيسي
+        function updateShowcaseDOM(player) {
+            document.getElementById('backNumber').textContent = player.number;
+            document.getElementById('playerName').textContent = player.name;
+            document.getElementById('playerPosition').textContent = player.role;
+            
+            document.getElementById('stat1Value').textContent = player.stat1Val;
+            document.getElementById('stat1Label').textContent = player.stat1Lab;
+            
+            document.getElementById('stat2Value').textContent = player.stat2Val;
+            document.getElementById('stat2Label').textContent = player.stat2Lab;
+            
+            document.getElementById('stat3Value').textContent = player.stat3Val;
+            document.getElementById('stat3Label').textContent = player.stat3Lab;
+
+            // تحديث مسار الصورة الكبيرة، مع الرجوع للوغو كشكل جمالي بديل إن كانت فارغة
+            const mainImgElement = document.getElementById('playerImage');
+            if (player.image !== "") {
+                mainImgElement.src = player.image;
+                mainImgElement.style.filter = "none"; // بدون تأثيرات سلبية لتعرض ألوان الصور الحقيقية بجمالها
+                mainImgElement.style.opacity = "1";
+            } else {
+                mainImgElement.src = defaultFallbackImage;
+                mainImgElement.style.filter = "drop-shadow(0 0 10px rgba(227, 6, 19, 0.4))"; // تأثير نيون للوجو كبديل مؤقت فخم
+                mainImgElement.style.opacity = "0.8";
+            }
+        }
+
+        // وظيفة تغيير بيانات كارت البطل التفاعلي عند الضغط (مع تأثيرات الأنيميشن)
+        function selectPlayer(player, cardElement) {
+            document.querySelectorAll('.selector-card').forEach(c => c.classList.remove('active'));
+            cardElement.classList.add('active');
+
+            const elementsToAnimate = [
+                document.getElementById('playerName'),
+                document.getElementById('playerPosition'),
+                document.getElementById('stat1Value'),
+                document.getElementById('stat2Value'),
+                document.getElementById('stat3Value'),
+                document.getElementById('backNumber'),
+                document.getElementById('playerImage')
+            ];
+
+            elementsToAnimate.forEach(el => el.classList.add('fade-animation'));
+
+            setTimeout(() => {
+                updateShowcaseDOM(player);
+
+                elementsToAnimate.forEach(el => {
+                    el.classList.remove('fade-animation');
+                    el.classList.add('fade-in');
+                    setTimeout(() => el.classList.remove('fade-in'), 300);
+                });
+            }, 200);
+        }
+    </script>
+</section>
+<!-- سيكشن متحف الأمجاد الملكي - تصميم فاخر ومستقبلي -->
+<section class="royal-museum-section" id="ali">
+    <!-- استدعاء خطوط فخمة مخصصة للمتاحف والبراندات العالمية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Kufi+Arabic:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --obsidian-black: #0a0a0b;
+            --brushed-gold: #bfa36a;
+            --gold-dim: rgba(191, 163, 106, 0.15);
+            --border-subtle: rgba(255, 255, 255, 0.04);
+            --text-light: #f5f5f7;
+            --text-gray: #86868b;
+        }
+
+        .royal-museum-section {
+            direction: rtl;
+            background-color: var(--obsidian-black);
+            color: var(--text-light);
+            padding: 120px 20px;
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* خلفية ناعمة جداً ومظلمة لتبرز الكروت */
+        .royal-museum-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 30%, rgba(191, 163, 106, 0.03) 0%, rgba(0,0,0,0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .museum-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ترويسة راقية للغاية تشبه متاحف اللوفر والبراندات العالمية */
+        .museum-header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .museum-header .subtitle {
+            font-family: 'Cinzel', serif;
+            color: var(--brushed-gold);
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .museum-header h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--text-light);
+            letter-spacing: -0.5px;
+        }
+
+        .museum-header h2 span {
+            color: var(--brushed-gold);
+            font-weight: 300;
+        }
+
+        .museum-header .line-separator {
+            width: 60px;
+            height: 1px;
+            background: var(--brushed-gold);
+            margin: 25px auto 0;
+            position: relative;
+        }
+
+        .museum-header .line-separator::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 5px;
+            background: var(--brushed-gold);
+            border-radius: 50%;
+        }
+
+        /* لوحة الشرف والترتيب العالمي */
+        .global-rank-badge {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 25px 40px;
+            margin-bottom: 60px;
+            backdrop-filter: blur(20px);
+        }
+
+        @media (max-width: 768px) {
+            .global-rank-badge {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        .rank-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .rank-title i {
+            color: var(--brushed-gold);
+            font-size: 24px;
+        }
+
+        .rank-title h3 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .rank-title p {
+            color: var(--text-gray);
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .rank-number-box {
+            text-align: center;
+            border-right: 1px solid var(--border-subtle);
+            padding-right: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .rank-number-box {
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+
+        .rank-number-box .num {
+            font-family: 'Cinzel', serif;
+            font-size: 45px;
+            font-weight: 900;
+            color: var(--brushed-gold);
+            line-height: 1;
+        }
+
+        .rank-number-box .label {
+            font-size: 11px;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* شبكة عرض الكؤوس الملكية */
+        .museum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        /* الكارت الفخم (العلبة الزجاجية للجوائز) */
+        .museum-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 0px; /* زوايا حادة لتعطي انطباع التصاميم الفاخرة والمعمارية الحديثة */
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* تأثير لمعان الذهب الفاخر عند الحركة */
+        .museum-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(191, 163, 106, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-25deg);
+            transition: 0.75s;
+            z-index: 2;
+        }
+
+        .museum-card:hover::before {
+            left: 150%;
+        }
+
+        .museum-card:hover {
+            border-color: var(--brushed-gold);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(191, 163, 106, 0.05);
+        }
+
+        /* مكان الصورة المفرغة الخاصة بك */
+        .museum-trophy-display {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .museum-trophy-display img {
+            max-height: 100%;
+            max-width: 85%;
+            object-fit: contain;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1;
+            /* للتأكد من عدم ظهور إطار الصورة المكسورة إذا كانت الخانة فارغة */
+            color: transparent; 
+        }
+
+        /* إذا لم ترفع صورة بعد، سيظهر تحديد مربع ذهبي في غاية الأناقة بدلاً من الصورة المكسورة */
+        .museum-trophy-display img:not([src]), 
+        .museum-trophy-display img[src=""] {
+            width: 120px;
+            height: 120px;
+            border: 1px dashed rgba(191, 163, 106, 0.3);
+            background: rgba(191, 163, 106, 0.02);
+            position: relative;
+        }
+
+        .museum-trophy-display img:not([src])::after, 
+        .museum-trophy-display img[src=""]::after {
+            content: 'صورة البطولة المفرغة';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--brushed-gold);
+            font-size: 10px;
+            white-space: nowrap;
+            letter-spacing: 1px;
+        }
+
+        .museum-card:hover .museum-trophy-display img {
+            transform: scale(1.08) translateY(-5px);
+        }
+
+        /* نصوص وتفاصيل الكارت */
+        .museum-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        .museum-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .museum-stats .count {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--brushed-gold);
+            line-height: 1;
+        }
+
+        .museum-stats .label {
+            font-size: 11px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .museum-footer-meta {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 18px;
+            font-size: 11px;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .museum-footer-meta i {
+            color: var(--brushed-gold);
+            font-size: 12px;
+        }
+    </style>
+
+    <div class="museum-container">
+        <!-- ترويسة السيكشن -->
+        <div class="museum-header">
+            <span class="subtitle">The Golden Vault</span>
+            <h2>خزانة <span>الأمجاد الإمبراطورية</span></h2>
+            <div class="line-separator"></div>
+        </div>
+
+        <!-- لوحة الترتيب العالمي الفخمة -->
+        <div class="global-rank-badge">
+            <div class="rank-title">
+                <i class="fa-solid fa-trophy"></i>
+                <div>
+                    <h3>الأكثر حصدًا للألقاب في القرن الجديد</h3>
+                    <p>ترتيب النادي الأهلي التاريخي كأول نادٍ في العالم اعتلاءً لمنصات الذهب والبطولات الرسمية القارية والمحلية.</p>
+                </div>
+            </div>
+            <div class="rank-number-box">
+                <span class="num">153</span>
+                <span class="label">إجمالي الكؤوس</span>
+            </div>
+        </div>
+
+        <!-- شبكة كروت المعرض -->
+        <div class="museum-grid">
+            
+            <!-- الكارت 1: دوري أبطال إفريقيا -->
+            <div class="museum-card">
+                <div class="museum-trophy-display">
+                    <!-- اتركه فارغاً وضع مسار صورتك الشفافة (PNG) هنا لاحقاً -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQol-0nB6fK0s3AC5WqfoqBEib3pBPirLXk_e8IYdcvW5qfNXnaEb0WRxc&s=10" alt="كأس دوري أبطال إفريقيا">
+                </div>
+                <h3>دوري أبطال إفريقيا</h3>
+                <div class="museum-stats">
+                    <span class="count">12</span>
+                    <span class="label">لقب أفريقي</span>
+                </div>
+                <div class="museum-footer-meta">
+                    <i class="fa-regular fa-star"></i>
+                    <span>تاريخ أول ذهب: 1982</span>
+                </div>
+            </div>
+
+            <!-- الكارت 2: الدوري المصري الممتاز -->
+            <div class="museum-card">
+                <div class="museum-trophy-display">
+                    <!-- اتركه فارغاً وضع مسار صورتك الشفافة (PNG) هنا لاحقاً -->
+                    <img src="https://www.okaz.com.sa/uploads/images/2025/05/28/2531674.jpg" alt="درع الدوري المصري">
+                </div>
+                <h3>الدوري المصري الممتاز</h3>
+                <div class="museum-stats">
+                    <span class="count">44</span>
+                    <span class="label">درع ذهبي</span>
+                </div>
+                <div class="museum-footer-meta">
+                    <i class="fa-regular fa-star"></i>
+                    <span>تاريخ أول ذهب: 1948</span>
+                </div>
+            </div>
+
+            <!-- الكارت 3: كأس مصر -->
+            <div class="museum-card">
+                <div class="museum-trophy-display">
+                    <!-- اتركه فارغاً وضع مسار صورتك الشفافة (PNG) هنا لاحقاً -->
+                    <img src="https://upload.wikimedia.org/wikipedia/ar/archive/5/5f/20231203215143%21Egyptian_Cup_%28football%29.png" alt="كأس مصر">
+                </div>
+                <h3>كأس مصر</h3>
+                <div class="museum-stats">
+                    <span class="count">39</span>
+                    <span class="label">كأس رسمي</span>
+                </div>
+                <div class="museum-footer-meta">
+                    <i class="fa-regular fa-star"></i>
+                    <span>تاريخ أول ذهب: 1923</span>
+                </div>
+            </div>
+
+            <!-- الكارت 4: السوبر الإفريقي -->
+            <div class="museum-card">
+                <div class="museum-trophy-display">
+                    <!-- اتركه فارغاً وضع مسار صورتك الشفافة (PNG) هنا لاحقاً -->
+                    <img src="19_2024-638630580963027966-302.png" alt="كأس السوبر الأفريقي">
+                </div>
+                <h3>السوبر الإفريقي</h3>
+                <div class="museum-stats">
+                    <span class="count">08</span>
+                    <span class="label">ألقاب قارية</span>
+                </div>
+                <div class="museum-footer-meta">
+                    <i class="fa-regular fa-star"></i>
+                    <span>تاريخ أول ذهب: 2002</span>
+                </div>
+            </div>
+
+            <!-- الكارت 5: السوبر المصري -->
+            <div class="museum-card">
+                <div class="museum-trophy-display">
+                    <!-- اتركه فارغاً وضع مسار صورتك الشفافة (PNG) هنا لاحقاً -->
+                    <img src="GCJFRnBXIAAbZyR.png" alt="كأس السوبر المصري">
+                </div>
+                <h3>السوبر المصري</h3>
+                <div class="museum-stats">
+                    <span class="count">15</span>
+                    <span class="label">كأس سوبر</span>
+                </div>
+                <div class="museum-footer-meta">
+                    <i class="fa-regular fa-star"></i>
+                    <span>تاريخ أول ذهب: 2003</span>
+                </div>
+            </div>
+
+            <!-- الكارت 6: برونزيات كأس العالم -->
+            <div class="museum-card">
+                <div class="museum-trophy-display">
+                    <!-- اتركه فارغاً وضع مسار صورتك الشفافة (PNG) هنا لاحقاً -->
+                    <img src="image.png" alt="برونزية مونديال الأندية">
+                </div>
+                <h3>برونزيات مونديال الأندية</h3>
+                <div class="museum-stats">
+                    <span class="count">04</span>
+                    <span class="label">ميداليات عالمية</span>
+                </div>
+                <div class="museum-footer-meta">
+                    <i class="fa-regular fa-star"></i>
+                    <span>تاريخ أول ذهب: 2006</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- سيكشن تذكرة المستقبل والمواجهات المرتقبة -->
+<section class="futuristic-stadium-schedule" id="omar">
+    <!-- استدعاء الخطوط والـ Icons الفخمة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Noto+Kufi+Arabic:wght@300;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --dark-abyss: #050506;
+            --neon-red: #ff1221;
+            --raw-gold: #c5a059;
+            --glass-sheen: rgba(255, 255, 255, 0.015);
+            --border-glow: rgba(255, 30, 43, 0.15);
+            --text-pure: #ffffff;
+            --text-dimmed: #707075;
+        }
+
+        .futuristic-stadium-schedule {
+            direction: rtl;
+            background-color: var(--dark-abyss);
+            color: var(--text-pure);
+            padding: 120px 20px;
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* توهج ضبابي خلفي كأنك تنظر لكشافات الاستاد من بعيد */
+        .futuristic-stadium-schedule::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 18, 33, 0.04) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .schedule-container {
+            max-width: 1250px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* الهيدر الفخم */
+        .stadium-header {
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .stadium-header .tagline {
+            font-family: 'Cinzel', serif;
+            color: var(--raw-gold);
+            font-size: 13px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .stadium-header h2 {
+            font-size: 38px;
+            font-weight: 900;
+            line-height: 1.3;
+        }
+
+        .stadium-header h2 span {
+            color: var(--neon-red);
+            font-weight: 300;
+        }
+
+        /* شبكة التقسيم غير المتماثلة */
+        .stadium-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .stadium-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* ================= 1. تصميم التذكرة الهولوجرامية التفاعلية ================= */
+        .hologram-ticket-wrapper {
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .hologram-ticket {
+            background: linear-gradient(145deg, rgba(20, 20, 22, 0.9) 0%, rgba(8, 8, 9, 0.95) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 50px 40px;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8), inset 0 0 20px rgba(255, 255, 255, 0.02);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
+        }
+
+        /* فتحات التذكرة الجانبية الشهيرة (Ticket Punches) */
+        .hologram-ticket::before, .hologram-ticket::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: var(--dark-abyss);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.9);
+        }
+
+        .hologram-ticket::before { left: -15px; border-right: 1px solid rgba(255, 255, 255, 0.05); }
+        .hologram-ticket::after { right: -15px; border-left: 1px solid rgba(255, 255, 255, 0.05); }
+
+        /* خطوط الملعب التجريدية في الخلفية */
+        .ticket-pitch-lines {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            right: 10%;
+            bottom: 10%;
+            border: 1px solid rgba(255, 255, 255, 0.015);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ticket-pitch-lines::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        /* الهيكل البصري للفريقين */
+        .ticket-match-clash {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 40px;
+        }
+
+        .ticket-team {
+            text-align: center;
+            width: 40%;
+        }
+
+        .ticket-team-logo {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        /* حلقة النيون الدوارة حول اللوجو */
+        .ticket-team-logo::after {
+            content: '';
+            position: absolute;
+            top: -3px; left: -3px; right: -3px; bottom: -3px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            transition: all 0.4s ease;
+        }
+
+        .hologram-ticket:hover .ticket-team-logo {
+            border-color: var(--neon-red);
+            box-shadow: 0 0 20px rgba(255, 18, 33, 0.15);
+        }
+
+        .ticket-team-logo img {
+            max-width: 65%;
+            max-height: 65%;
+            object-fit: contain;
+        }
+
+        .ticket-team h4 {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .ticket-vs {
+            font-family: 'Cinzel', serif;
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--text-dimmed);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+
+        /* تفاصيل ومكان المباراة */
+        .ticket-info-bar {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+        }
+
+        .ticket-info-bar .tournament {
+            display: inline-block;
+            color: var(--raw-gold);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .ticket-info-bar .venue {
+            font-size: 13px;
+            color: var(--text-dimmed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .ticket-info-bar .venue i {
+            color: var(--neon-red);
+        }
+
+        /* العداد التنازلي التكتيكي (Digital Countdown) */
+        .ticket-countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .countdown-segment {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            min-width: 65px;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .countdown-segment .value {
+            font-family: monospace;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--text-pure);
+            display: block;
+            line-height: 1;
+        }
+
+        .countdown-segment .label {
+            font-size: 10px;
+            color: var(--text-dimmed);
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* تأثير الـ Hover ثلاثي الأبعاد على التذكرة */
+        .hologram-ticket-wrapper:hover .hologram-ticket {
+            transform: rotateY(5deg) rotateX(2deg) translateY(-5px);
+            border-color: rgba(255, 18, 33, 0.3);
+            box-shadow: 0 40px 80px rgba(255, 18, 33, 0.08), 0 0 40px rgba(0,0,0,0.9);
+        }
+
+
+        /* ================= 2. تصميم لوحات الـ LED للمباريات الفرعية ================= */
+        .stadium-adboards-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .led-adboard-match {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 25px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* خط نيون رفيع على طرف اللوحة يضيء عند التمرير */
+        .led-adboard-match::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 2px;
+            background: transparent;
+            transition: all 0.4s ease;
+        }
+
+        .led-adboard-match:hover {
+            border-color: rgba(255, 18, 33, 0.2);
+            background: rgba(255, 18, 33, 0.01);
+            transform: translateX(-8px);
+        }
+
+        .led-adboard-match:hover::before {
+            background: var(--neon-red);
+            box-shadow: 0 0 10px var(--neon-red);
+        }
+
+        .adboard-teams {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* مكان اللوجو الشفاف */
+        .adboard-mini-logo {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .adboard-mini-logo img {
+            max-width: 60%;
+            max-height: 60%;
+            object-fit: contain;
+        }
+
+        .adboard-teams-info h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .adboard-teams-info p {
+            font-size: 11px;
+            color: var(--text-dimmed);
+        }
+
+        .adboard-time-meta {
+            text-align: left;
+        }
+
+        .adboard-time-meta .date-tag {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--raw-gold);
+            display: block;
+        }
+
+        .adboard-time-meta .hour-tag {
+            font-size: 11px;
+            color: var(--text-dimmed);
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
+
+    <div class="schedule-container">
+        <!-- ترويسة القسم -->
+        <div class="stadium-header">
+            <span class="tagline">Next Battles</span>
+            <h2>كتيبة القتال <span>على الخطوط الأمامية</span></h2>
+        </div>
+
+        <div class="stadium-grid">
+            <!-- 1. التذكرة الهولوجرامية التفاعلية -->
+            <div class="hologram-ticket-wrapper">
+                <div class="hologram-ticket">
+                    <!-- خطوط الاستاد بالخلفية -->
+                    <div class="ticket-pitch-lines"></div>
+
+                    <!-- تفاصيل البطولة والملعب -->
+                    <div class="ticket-info-bar">
+                        <span class="tournament" id="ticketTournament">تحميل البطولة...</span>
+                        <div class="venue">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span id="ticketVenue">تحميل الملعب...</span>
+                        </div>
+                    </div>
+
+                    <!-- مواجهة الفريقين داخل التذكرة -->
+                    <div class="ticket-match-clash">
+                        <div class="ticket-team">
+                            <div class="ticket-team-logo">
+                                <!-- لوجو الأهلي الشفاف (سيبتهولك فاضي ترفع صورتك بنفسك) -->
+                                <img src="" alt="الأهلي" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <i class="fa-solid fa-shield-halved" style="display:none; color: var(--neon-red); font-size: 28px;"></i>
+                            </div>
+                            <h4>الأهلي</h4>
+                        </div>
+
+                        <div class="ticket-vs">VS</div>
+
+                        <div class="ticket-team">
+                            <div class="ticket-team-logo">
+                                <!-- لوجو الخصم (سيبتهولك فاضي ترفع صورتك بنفسك) -->
+                                <img src="" alt="الخصم" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <i class="fa-solid fa-shield-halved" style="display:none; color: var(--text-dimmed); font-size: 28px;"></i>
+                            </div>
+                            <h4 id="ticketAwayTeam">تحميل...</h4>
+                        </div>
+                    </div>
+
+                    <!-- العداد التنازلي التكتيكي الرقمي -->
+                    <div class="ticket-countdown">
+                        <div class="countdown-segment">
+                            <span class="value" id="tDays">00</span>
+                            <span class="label">يوم</span>
+                        </div>
+                        <div class="countdown-segment">
+                            <span class="value" id="tHours">00</span>
+                            <span class="label">ساعة</span>
+                        </div>
+                        <div class="countdown-segment">
+                            <span class="value" id="tMin">00</span>
+                            <span class="label">دقيقة</span>
+                        </div>
+                        <div class="countdown-segment">
+                            <span class="value" id="tSec">00</span>
+                            <span class="label">ثانية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. لوحات الـ LED الإعلانية المضيئة للمباريات الـ 3 المتبقية -->
+            <div class="stadium-adboards-column" id="adboardMatchesList">
+                <!-- سيتم تعبئتها ديناميكياً لتسهيل التعديل من الـ JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- كود الجافا سكريبت الذكي لتشغيل العداد واللوحات تلقائياً -->
+    <script>
+        // مصفوفة مباريات الأهلي الأربعة القادمة (معدلة لشهر يوليو وأغسطس 2026 لتناسب الوقت الحالي)
+        const stadiumMatches = [
+            {
+                tournament: "الدوري المصري الممتاز",
+                homeTeam: "الأهلي",
+                homeLogo: "", // ضع مسار لوجو الأهلي هنا
+                awayTeam: "بيراميدز",
+                awayLogo: "", // ضع مسار لوجو الخصم هنا
+                venue: "استاد القاهرة الدولي",
+                time: "21:00",
+                // التاريخ المستهدف للعد التنازلي (السنة، الشهر - 1، اليوم، الساعة، الدقيقة)
+                countdownTarget: new Date(2026, 6, 21, 21, 0, 0).getTime()
+            },
+            {
+                tournament: "الدوري المصري الممتاز",
+                homeTeam: "سموحة",
+                homeLogo: "",
+                awayTeam: "الأهلي",
+                awayLogo: "",
+                venue: "استاد الإسكندرية",
+                time: "19:00",
+                dateLabel: "25 يوليو 2026"
+            },
+            {
+                tournament: "الدوري المصري الممتاز",
+                homeTeam: "الأهلي",
+                homeLogo: "",
+                awayTeam: "الزمالك",
+                awayLogo: "",
+                venue: "استاد القاهرة الدولي",
+                time: "20:30",
+                dateLabel: "31 يوليو 2026"
+            },
+            {
+                tournament: "كأس مصر - دور الـ 16",
+                homeTeam: "الأهلي",
+                homeLogo: "",
+                awayTeam: "إنبي",
+                awayLogo: "",
+                venue: "استاد السلام",
+                time: "18:00",
+                dateLabel: "05 أغسطس 2026"
+            }
+        ];
+
+        // تهيئة الـ Featured Match (التذكرة الهولوجرامية)
+        function initHologramTicket() {
+            const currentMatch = stadiumMatches[0];
+            document.getElementById('ticketTournament').textContent = currentMatch.tournament;
+            document.getElementById('ticketVenue').textContent = currentMatch.venue;
+            document.getElementById('ticketAwayTeam').textContent = currentMatch.awayTeam;
+
+            // عد تنازلي مباشر
+            const timerInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const diff = currentMatch.countdownTarget - now;
+
+                if (diff < 0) {
+                    clearInterval(timerInterval);
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('tDays').textContent = days.toString().padStart(2, '0');
+                document.getElementById('tHours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('tMin').textContent = mins.toString().padStart(2, '0');
+                document.getElementById('tSec').textContent = secs.toString().padStart(2, '0');
+            }, 1000);
+        }
+
+        // تهيئة لوحات الـ LED الجانبية الـ 3
+        function initAdboards() {
+            const listContainer = document.getElementById('adboardMatchesList');
+            listContainer.innerHTML = "";
+
+            for (let i = 1; i < stadiumMatches.length; i++) {
+                const m = stadiumMatches[i];
+
+                const adboard = document.createElement('div');
+                adboard.className = "led-adboard-match";
+                adboard.innerHTML = `
+                    <div class="adboard-teams">
+                        <!-- لوجو الفريق 1 -->
+                        <div class="adboard-mini-logo">
+                            <img src="${m.homeLogo}" alt="${m.homeTeam}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-solid fa-shield-halved" style="display:none; font-size: 16px; color: var(--text-dimmed);"></i>
+                        </div>
+
+                        <div class="adboard-teams-info">
+                            <h4>${m.homeTeam} ضد ${m.awayTeam}</h4>
+                            <p>${m.tournament} | ${m.venue}</p>
+                        </div>
+
+                        <!-- لوجو الفريق 2 -->
+                        <div class="adboard-mini-logo">
+                            <img src="${m.awayLogo}" alt="${m.awayTeam}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-solid fa-shield-halved" style="display:none; font-size: 16px; color: var(--text-dimmed);"></i>
+                        </div>
+                    </div>
+
+                    <div class="adboard-time-meta">
+                        <span class="date-tag">${m.dateLabel}</span>
+                        <span class="hour-tag">ساعة ${m.time}</span>
+                    </div>
+                `;
+                listContainer.appendChild(adboard);
+            }
+        }
+
+        // انطلاق التشغيل عند التحميل
+        document.addEventListener('DOMContentLoaded', () => {
+            initHologramTicket();
+            initAdboards();
+        });
+    </script>
+</section>
+<!-- سيكشن معرض أبطال الصالات الملكي - تصميم هادئ وفاخر جداً -->
+<section class="premium-sports-gallery" id="isco">
+    <!-- استدعاء خطوط المتاحف العالمية والخط العربي الرفيع -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;600&family=Noto+Kufi+Arabic:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --slate-black: #0a0a0a;
+            --marble-dark: #121212;
+            --platinum-white: #f5f5f7;
+            --muted-gold: #c5a059;
+            --subtle-border: rgba(255, 255, 255, 0.05);
+            --text-dim: #86868b;
+        }
+
+        .premium-sports-gallery {
+            direction: rtl;
+            background-color: var(--slate-black);
+            color: var(--platinum-white);
+            padding: 140px 20px;
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            position: relative;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* هيدر هادئ وراقٍ للغاية بمساحات بيضاء مريحة */
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 90px;
+        }
+
+        .gallery-header .roman-numeral {
+            font-family: 'Cinzel', serif;
+            color: var(--muted-gold);
+            font-size: 13px;
+            letter-spacing: 6px;
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .gallery-header h2 {
+            font-size: 36px;
+            font-weight: 500;
+            letter-spacing: -1px;
+            color: var(--platinum-white);
+        }
+
+        .gallery-header h2 span {
+            font-weight: 300;
+            color: var(--text-dim);
+        }
+
+        /* شبكة عرض كلاسيكية متزنة (3 أعمدة متساوية تماماً) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* برواز اللوحة الفنية لكل لعبة */
+        .exhibit-card {
+            background-color: var(--marble-dark);
+            border: 1px solid var(--subtle-border);
+            padding: 40px 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 500px;
+            transition: all 0.6s cubic-bezier(0.15, 0.85, 0.35, 1);
+        }
+
+        /* عند تمرير الماوس: إطار ذهبي رفيع كلاسيكي وهادئ جداً */
+        .exhibit-card:hover {
+            border-color: rgba(197, 160, 89, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            transform: translateY(-5px);
+        }
+
+        /* الرقم التعريفي الأنيق في أعلى الكارت */
+        .exhibit-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--subtle-border);
+            padding-bottom: 20px;
+        }
+
+        .exhibit-number {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            color: var(--muted-gold);
+            font-weight: 300;
+        }
+
+        .exhibit-tag {
+            font-size: 10px;
+            color: var(--text-dim);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* حاوية الصورة المفرغة (إطار العرض الفني) */
+        .exhibit-image-frame {
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin: 30px 0;
+        }
+
+        .exhibit-image-frame img {
+            max-height: 100%;
+            max-width: 85%;
+            object-fit: contain;
+            filter: grayscale(40%) contrast(1.05); /* طابع صور المجلات الفاخرة */
+            transition: transform 0.8s cubic-bezier(0.15, 0.85, 0.35, 1);
+        }
+
+        /* زووم هادئ وبطيء جداً عند تمرير الماوس */
+        .exhibit-card:hover .exhibit-image-frame img {
+            transform: scale(1.05);
+            filter: grayscale(0%) contrast(1);
+        }
+
+        /* بديل أنيق للغاية في حالة عدم وجود صورة بعد */
+        .exhibit-image-frame img:not([src]), 
+        .exhibit-image-frame img[src=""] {
+            width: 80px;
+            height: 80px;
+            border: 1px dashed rgba(197, 160, 89, 0.15);
+            background: rgba(197, 160, 89, 0.01);
+            position: relative;
+        }
+
+        .exhibit-image-frame img:not([src])::after, 
+        .exhibit-image-frame img[src=""]::after {
+            content: 'EXHIBIT PORTRAIT';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--muted-gold);
+            font-family: 'Cinzel', serif;
+            font-size: 8px;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        /* تفاصيل اللعبة ونصوص الفخامة الهادئة */
+        .exhibit-details {
+            text-align: right;
+        }
+
+        .exhibit-details h3 {
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--platinum-white);
+            margin-bottom: 8px;
+        }
+
+        .exhibit-details p {
+            font-size: 12px;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
+        .exhibit-stats {
+            margin-top: 15px;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            color: var(--muted-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exhibit-stats span {
+            font-weight: 600;
+        }
+
+        .exhibit-stats::before {
+            content: '';
+            width: 15px;
+            height: 1px;
+            background-color: var(--muted-gold);
+            display: inline-block;
+        }
+    </style>
+
+    <div class="gallery-container">
+        <!-- ترويسة المعرض الفني -->
+        <div class="gallery-header">
+            <span class="roman-numeral">EXHIBIT SECTION VI</span>
+            <h2>الألعاب الرياضية الاخري ...</h2>
+        </div>
+
+        <!-- شبكة اللوحات الكلاسيكية الثلاثة -->
+        <div class="gallery-grid">
+            
+            <!-- اللوحة الأولى: كرة السلة -->
+            <div class="exhibit-card">
+                <div class="exhibit-meta">
+                    <span class="exhibit-number">I</span>
+                    <span class="exhibit-tag">BASKETBALL</span>
+                </div>
+
+                <div class="exhibit-image-frame">
+                    <!-- اتركه فارغاً وضع صورتك المفرغة الفخمة لاحقاً -->
+                    <img src="https://fmcdn.alqaheranews.net/2f7a8250-5789-11f1-ac6b-63efae64053a-file-1779638214381-451194545?&w=700&compress=80&gravity=face" alt="كرة السلة بالنادي الأهلي">
+                </div>
+
+                <div class="exhibit-details">
+                    <h3>كرة السلة</h3>
+                    <p>نادي القرن يعتلي عروش ملاعب كرة السلة محلياً وإفريقياً بأرقام قياسية وتاريخ حافل بالذهب والأمجاد.</p>
+                    <div class="exhibit-stats">
+                        <span>43 CHAMPIONSHIPS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- اللوحة الثانية: كرة اليد -->
+            <div class="exhibit-card">
+                <div class="exhibit-meta">
+                    <span class="exhibit-number">II</span>
+                    <span class="exhibit-tag">HANDBALL</span>
+                </div>
+
+                <div class="exhibit-image-frame">
+                    <!-- اتركه فارغاً وضع صورتك المفرغة الفخمة لاحقاً -->
+                    <img src="https://koraplus.com/images/2024/9/large/1644140042104202409270351525152.jpg" alt="كرة اليد بالنادي الأهلي">
+                </div>
+
+                <div class="exhibit-details">
+                    <h3>كرة اليد</h3>
+                    <p>الكوماندوز في صدارة المشهد الرياضي الأفريقي، كتابة مستمرة للتاريخ في الصالات المغطاة وبطولات العالم للأندية.</p>
+                    <div class="exhibit-stats">
+                        <span>61 CHAMPIONSHIPS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- اللوحة الثالثة: كرة الطائرة -->
+            <div class="exhibit-card">
+                <div class="exhibit-meta">
+                    <span class="exhibit-number">III</span>
+                    <span class="exhibit-tag">VOLLEYBALL</span>
+                </div>
+
+                <div class="exhibit-image-frame">
+                    <!-- اتركه فارغاً وضع صورتك المفرغة الفخمة لاحقاً -->
+                    <img src="https://www.el-ahly.com/images/news/144923-%D8%B1%D8%AC%D8%A7%D9%84-%D8%A7%D9%84%D8%B7%D8%A7%D8%A6%D8%B1%D8%A9.jpg" alt="كرة الطائرة بالنادي الأهلي">
+                </div>
+
+                <div class="exhibit-details">
+                    <h3>كرة الطائرة</h3>
+                    <p>ملوك اللعبة والأكثر تتويجاً بالبطولات على المستوى العالمي والمحلي بروح لا تعرف سوى منصات التتويج.</p>
+                    <div class="exhibit-stats">
+                        <span>85 CHAMPIONSHIPS</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- سيكشن الختام الفخم - تلمس القلوب وتوقيع المهندس مع أيقوناته الخاصة -->
+<footer class="royal-footer">
+    <!-- استدعاء الخطوط والـ Icons الفخمة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Kufi+Arabic:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --footer-black: #070708;
+            --premium-gold: #c5a059;
+            --soft-white: #f5f5f7;
+            --text-muted-gray: #6e6e73;
+            --line-subtle: rgba(255, 255, 255, 0.03);
+        }
+
+        .royal-footer {
+            direction: rtl;
+            background-color: var(--footer-black);
+            color: var(--soft-white);
+            padding: 100px 20px 40px;
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            position: relative;
+            border-top: 1px solid var(--line-subtle);
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* الجزء الأول: رسالة الكيان والجمهور */
+        .footer-tribute {
+            max-width: 750px;
+            margin: 0 auto 50px;
+        }
+
+        .footer-tribute .crest-symbol {
+            font-family: 'Cinzel', serif;
+            color: var(--premium-gold);
+            font-size: 20px;
+            letter-spacing: 4px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .footer-tribute h3 {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--soft-white);
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-tribute p {
+            font-size: 14px;
+            color: var(--text-muted-gray);
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        /* الفاصل الأنيق */
+        .footer-divider {
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--premium-gold), transparent);
+            margin: 0 auto 40px;
+        }
+
+        /* الجزء الثاني: حقوق النشر وتوقيع المهندس عمر */
+        .footer-signature-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-muted-gray);
+            border-top: 1px solid var(--line-subtle);
+            padding-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-signature-area {
+                flex-direction: column;
+                gap: 25px;
+                text-align: center;
+            }
+        }
+
+        .copyright-text {
+            font-weight: 300;
+        }
+
+        /* حاوية التوقيع الخاص بالمهندس */
+        .creator-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* محاذاة لليسار لتتناسق مع التصميم الإنجليزي */
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .creator-wrapper {
+                align-items: center;
+            }
+        }
+
+        .creator-credits {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+            font-size: 11px;
+            line-height: 1;
+        }
+
+        .creator-credits span {
+            color: var(--premium-gold);
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        /* الأيقونات الخاصة بك تحت الاسم مباشرة */
+        .creator-socials {
+            display: flex;
+            gap: 15px;
+            margin-top: 2px;
+        }
+
+        .creator-socials a {
+            color: var(--text-muted-gray);
+            font-size: 13px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+        }
+
+        .creator-socials a:hover {
+            color: var(--premium-gold);
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <div class="footer-container">
+        <!-- تكريم الكيان والجمهور -->
+        <div class="footer-tribute">
+            <span class="crest-symbol">1907</span>
+            <h3>أعظم كيان حركت به الفرحة قلوب الملايين</h3>
+            <p>
+                لم يكن النادي الأهلي يوماً مجرد شعار نرتديه أو فريقاً نشجعه على المستطيل الأخضر، بل هو قصة عشقٍ أبدية تتوارثها الأجيال. هو الكيان الذي يُداوي جراح أيامنا، ويرسم البهجة الصافية على وجوه البسطاء مع كل صافرة نهاية وتتويج بالذهب. لقد جعل الأهلي من الفرح ثقافة، ومن الصدارة قدراً، ليبقى شامخاً كأعظم نادٍ في الكون، ومصدراً ملهماً للفخر والوفاء لجمهوره الأعظم في التاريخ.
+            </p>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <!-- حقوق النشر وتوقيعك الذهبي مع أيقوناتك الخاصة -->
+        <div class="footer-signature-area">
+            <div class="copyright-text">
+                &copy; 2026 جميع الحقوق محفوظة لعشاق النادي الأهلي المصري.
+            </div>
+            
+            <!-- توقيعك مع الأيقونات الخاصة بك -->
+            <div class="creator-wrapper">
+                <div class="creator-credits">
+                    DESIGNED & DEVELOPED BY <span>ENG OMAR KILANY</span>
+                </div>
+                <div class="creator-socials">
+                    <!-- ضع روابط حساباتك الشخصية هنا في الـ href -->
+                    <a href="https://www.instagram.com/omar_kilany14?igsh=N3N4OHQ3c20xdnMz" target="_blank" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@omar_kilany22?_r=1&_t=ZS-9848DytyKQL" target="_blank" title="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1C7FxmttSM/" target="_blank" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
